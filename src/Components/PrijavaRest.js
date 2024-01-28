@@ -24,7 +24,7 @@ const PrijavaRest = () => {
 
   const GetRestaurantsOfOwner = async (id) => {
   try {
-   const niz = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetRestaurantsOfOwner/${id}`)
+   const niz = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetRestaurantsOfOwner/${id}`)
    setRests(niz.data);
    setIzaberiRest(true);
    setButtonContent("Prijavi se")
@@ -40,7 +40,7 @@ const PrijavaRest = () => {
      localStorage.setItem("IdRest",rests.find(x => x.name == document.getElementById("nr").value).id);
     }
      try {
-     const resp = await axios.post("http://benjamin002-001-site1.jtempurl.com/LoginOwner", {
+     const resp = await axios.post("https://benjamin002-001-site1.jtempurl.com/LoginOwner", {
       username,
       password
     });

@@ -16,7 +16,7 @@ function PrikazRest() {
   const GetRestaurantWithId = async () => {
    //alert("Waiting...")
     try{
-      const resp = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetRestaurantById/${id}`);
+      const resp = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetRestaurantById/${id}`);
       const respData = resp.data;
       setRest(resp.data);
       console.log(resp.data);
@@ -28,7 +28,7 @@ function PrikazRest() {
   const GetMenu = async () => {
     setLoading(true);
     try {
-    const niz = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetAllProductsOfRestaurant/${id}`);
+    const niz = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetAllProductsOfRestaurant/${id}`);
     setMyMeni(niz.data);
     setLoading(false);
   }

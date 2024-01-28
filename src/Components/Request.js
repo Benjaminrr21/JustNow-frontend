@@ -11,7 +11,7 @@ const Request = (props) => {
     const GetOwner = async () => {
       
         try{
-        const obj = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetOwnerById/${props.ownerId}`)
+        const obj = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetOwnerById/${props.ownerId}`)
         console.log(obj);
         const o = obj.data;
         setOwner(o);
@@ -25,7 +25,7 @@ const Request = (props) => {
       //console.log("eee")
       // Update the status of the registration request in the database
       try {
-      const ob = await axios.put(`http://benjamin002-001-site1.jtempurl.com/UpdateStatus/${ownerId}`);
+      const ob = await axios.put(`https://benjamin002-001-site1.jtempurl.com/UpdateStatus/${ownerId}`);
       console.log(ob);
       //alert("Uspesno");
       //await api.updateRegistrationRequest(requestId, { status: 'Accepted' });
@@ -38,7 +38,7 @@ const Request = (props) => {
   };
   const removeRequest = async (ownerId) => {
     try {
-      const ob = await axios.delete(`http://benjamin002-001-site1.jtempurl.com/DeleteRestaurant/${ownerId}`);
+      const ob = await axios.delete(`https://benjamin002-001-site1.jtempurl.com/DeleteRestaurant/${ownerId}`);
       console.log(ob);
       //alert("Uspesno");
       //await api.updateRegistrationRequest(requestId, { status: 'Accepted' });

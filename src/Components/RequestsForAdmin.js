@@ -31,7 +31,7 @@ const RequestsForAdmin = () => {
     useEffect(() => {
         setLoading(true);
         //GetOwner();
-        axios.get("http://benjamin002-001-site1.jtempurl.com/GetRestaurantsOnWaiting")
+        axios.get("https://benjamin002-001-site1.jtempurl.com/GetRestaurantsOnWaiting")
         .then(resp => {
             console.log(resp.data);
             setRequests(resp.data);

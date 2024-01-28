@@ -31,7 +31,7 @@ const EditRest = () => {
 
     const getRestaurantForEdit = async () => {
         try {
-            const response = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetRestaurantById/${id}`);
+            const response = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetRestaurantById/${id}`);
             console.log(response);
             const resp = response.data;
             setRestFromBackend(resp);
@@ -43,7 +43,7 @@ const EditRest = () => {
     useEffect(()=>{getRestaurantForEdit();},[id]);
      const editRest = () => {
         try {
-            axios.put(`http://benjamin002-001-site1.jtempurl.com/UpdateRestaurant/${id}`,{
+            axios.put(`https://benjamin002-001-site1.jtempurl.com/UpdateRestaurant/${id}`,{
                 name:restFromBackend.name,
                 location:restFromBackend.location,
                 workingTime:restFromBackend.workingTime,

@@ -31,12 +31,12 @@ function RestCard(props) {
   }
   const DeleteHandler = () => {
     
-    const obj = axios.delete(`http://benjamin002-001-site1.jtempurl.com/DeleteRestaurant/${props.data}`);
+    const obj = axios.delete(`https://benjamin002-001-site1.jtempurl.com/DeleteRestaurant/${props.data}`);
     alert("Obrisan restoran");
-    axios.get("http://benjamin002-001-site1.jtempurl.com/GetAllRestaurants");
+    axios.get("https://benjamin002-001-site1.jtempurl.com/GetAllRestaurants");
   }
   useEffect(()=>{
-    axios.get(`http://benjamin002-001-site1.jtempurl.com/GetAverageGrade/${props.data}`)
+    axios.get(`https://benjamin002-001-site1.jtempurl.com/GetAverageGrade/${props.data}`)
     .then((grade)=>{
       console.log(grade);
       setAverage(grade.data);

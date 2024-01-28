@@ -9,7 +9,7 @@ const SignalComponent = () => {
   useEffect(() => {
     console.log("Connections...");
     const connect = new HubConnectionBuilder()
-      .withUrl("http://benjamin002-001-site1.jtempurl.com/hubs/notifications")
+      .withUrl("https://benjamin002-001-site1.jtempurl.com/hubs/notifications")
       .withAutomaticReconnect()
       .build();
 

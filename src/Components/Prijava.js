@@ -30,7 +30,7 @@ function Prijava() {
  const Login = async () => {
    setLoading(true);
    try {
-   const resp = await axios.post("http://benjamin002-001-site1.jtempurl.com/LoginUser", {
+   const resp = await axios.post("https://benjamin002-001-site1.jtempurl.com/LoginUser", {
      username,
      password
    });

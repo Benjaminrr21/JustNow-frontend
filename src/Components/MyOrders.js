@@ -43,7 +43,7 @@ const MyOrders = () => {
     };
   }, []);
   useEffect(() => {
-    axios.get(`http://benjamin002-001-site1.jtempurl.com/GetOrdersOfRestaurant/${id}`)
+    axios.get(`https://benjamin002-001-site1.jtempurl.com/GetOrdersOfRestaurant/${id}`)
     .then(myorders => {
         console.log(myorders.data);
         if(myorders.data == "Nema novih porudzbina.") {setNotMess(true); }
@@ -55,7 +55,7 @@ const MyOrders = () => {
 },[])
    const GetMyOrders = async () => {
     try {
-        const myorders = await axios.get("https://localhost:7224/GetOrdersOfRestaurant/1045")
+        const myorders = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetOrdersOfRestaurant/${id}`)
         const o = myorders.data;
         console.log(myorders);
         setMyOrders(o);

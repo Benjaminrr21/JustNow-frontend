@@ -74,7 +74,7 @@ const MojRacun = () => {
      try{
     for (let i=0;i<mojRacun.length;i++) {
      
-       const data = await axios.post("http://benjamin002-001-site1.jtempurl.com/AddNewOrder",{
+       const data = await axios.post("https://benjamin002-001-site1.jtempurl.com/AddNewOrder",{
         restaurantId:mojRacun[i].restaurantId,
         userId: mojRacun[i].userId,
         name: mojRacun[i].name,

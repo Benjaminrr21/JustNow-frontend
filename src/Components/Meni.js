@@ -21,7 +21,7 @@ const Meni = ({rid,meni,restoran,sendDataToParent}) => {
   const Brisanje = async (id) => {
 
     try {
-      axios.delete(`http://benjamin002-001-site1.jtempurl.com/DeleteProductWithId/${id}`);
+      axios.delete(`https://benjamin002-001-site1.jtempurl.com/DeleteProductWithId/${id}`);
       console.log("Uspesno brisanje");
       //console.log(filterMeni);
      /*  setMeni(props.meni);*/

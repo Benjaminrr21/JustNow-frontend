@@ -17,7 +17,7 @@ function HomePage() {
   
   useEffect(() => {
     const newConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
+      .withUrl('https://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
       .withAutomaticReconnect()
       .build();
 

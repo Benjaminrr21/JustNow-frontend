@@ -93,7 +93,7 @@ const  Registracija = ()=> {
    try{
     setLoading(true);
     console.log(name,lastname,email,username,password)
-  const resp = await axios.post("http://benjamin002-001-site1.jtempurl.com/RegisterUser",
+  const resp = await axios.post("https://benjamin002-001-site1.jtempurl.com/RegisterUser",
   {
   firstName: name,
   lastName: lastname,

@@ -16,7 +16,7 @@ const Pretraga = () => {
 
     const PretraziPoNazivu = async () => {
         try {
-        const restorani = await axios.get(`http://benjamin002-001-site1.jtempurl.com/SearchRestaurantByName/${naziv}`)
+        const restorani = await axios.get(`https://benjamin002-001-site1.jtempurl.com/SearchRestaurantByName/${naziv}`)
         
         
         const rests = restorani.data;

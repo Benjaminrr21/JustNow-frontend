@@ -7,7 +7,7 @@ function PrikazKorisnika() {
     const VratiKorisnike = 
     useEffect(() => {
         try{
-        axios.get("http://benjamin002-001-site1.jtempurl.com/GetAllUsers")
+        axios.get("https://benjamin002-001-site1.jtempurl.com/GetAllUsers")
         .then(resp => { 
             console.log(resp.data);
             setUsers(resp.data);

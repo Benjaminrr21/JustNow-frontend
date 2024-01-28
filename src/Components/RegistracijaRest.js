@@ -61,7 +61,7 @@ const  RegistracijaRest = ()=> {
    
    else{
    try {
-    const owner = await axios.post("http://benjamin002-001-site1.jtempurl.com/RegisterOwner", {
+    const owner = await axios.post("https://benjamin002-001-site1.jtempurl.com/RegisterOwner", {
       firstName: name,
       lastName: lastname,
       email: email,

@@ -31,7 +31,7 @@ const UnosProizvod = () => {
     const InsertProduct = async () => {
       console.log(name,url,cena,r);
       try {
-      const inp = await axios.post("http://benjamin002-001-site1.jtempurl.com/AddProduct",{
+      const inp = await axios.post("https://benjamin002-001-site1.jtempurl.com/AddProduct",{
         name:name,
         photoUrl: url,
         price: cena,

@@ -8,7 +8,7 @@ const RatingRest = (props) => {
     const [hover,setHover] = useState(null);
     const Oceni = async (rating,restid) => {
       try{
-      const grade = await axios.post("http://benjamin002-001-site1.jtempurl.com/AddNewGrade",{
+      const grade = await axios.post("https://benjamin002-001-site1.jtempurl.com/AddNewGrade",{
         userId: parseInt(JSON.parse(localStorage.getItem("User")).user.id),
         restaurantId: restid,
         grade: rating

@@ -34,7 +34,8 @@ function Restorani() {
     const getRests = async () => {
       setLoading(true);
       try {
-        const rsts = await axios.get("http://benjamin002-001-site1.jtempurl.com/GetAllRestaurants");
+        const rsts = await axios.get("https://benjamin002-001-site1.jtempurl.com/GetAllRestaurants");
+        //const rsts = await axios.get("https://localhost:7224/GetAllRestaurants");
         console.log(rsts);
         setNiz(rsts.data);
         setLoading(false);
@@ -45,7 +46,7 @@ function Restorani() {
     }
     const Sort = async () => {
       setLoading(true);
-      const rests = await axios.get("http://benjamin002-001-site1.jtempurl.com/SortRestaurants");
+      const rests = await axios.get("https://benjamin002-001-site1.jtempurl.com/SortRestaurants");
       console.log(rests);
       setNiz(rests.data);
       setLoading(false);
@@ -53,7 +54,7 @@ function Restorani() {
     const Filter = async (food) => {
       
        setLoading(true);
-      const filterNiz = await axios.get(`http://benjamin002-001-site1.jtempurl.com/FilterRestaurantsByProduct/${food}`);
+      const filterNiz = await axios.get(`https://benjamin002-001-site1.jtempurl.com/FilterRestaurantsByProduct/${food}`);
       console.log(filterNiz);
       setNiz(filterNiz.data);
       setLoading(false); 

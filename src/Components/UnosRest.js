@@ -49,7 +49,7 @@ function UnosRest() {
 //        alert(imageBase64);
         try{
          //const r = await axios.post("https://localhost:7224/AddRestaurant", {
-         const r = await axios.post("http://benjamin002-001-site1.jtempurl.com/AddRestaurant", {
+         const r = await axios.post("https://benjamin002-001-site1.jtempurl.com/AddRestaurant", {
             pib: pib,
             name: naziv,
             location: lokacija,

@@ -25,7 +25,7 @@ const IzmenaProizvoda = () => {
 
     const GetProductWithId = async () => {
         try{
-            const response = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetProductById/${id}`);
+            const response = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetProductById/${id}`);
             console.log(response);
             const resp = response.data;
             setProduct(resp);
@@ -51,7 +51,7 @@ const IzmenaProizvoda = () => {
     const GetNameOfRest = async (id) => {
        
         try {
-            const rest = await axios.get(`http://benjamin002-001-site1.jtempurl.com/GetNameOfRestaurant/${id}`);
+            const rest = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetNameOfRestaurant/${id}`);
             console.log(rest);
             //const resp = rest.data;
             setNameRest(rest.data);
@@ -73,7 +73,7 @@ const IzmenaProizvoda = () => {
     const editProd = async () => {
         //alert(image)
         try {
-            const p = await axios.put(`http://benjamin002-001-site1.jtempurl.com/UpdateProduct/${id}`,{
+            const p = await axios.put(`https://benjamin002-001-site1.jtempurl.com/UpdateProduct/${id}`,{
                 name:product.name,
                 price:product.price,
                 photoUrl:image,

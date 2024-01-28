@@ -6,7 +6,7 @@ import axios from 'axios';
 const OrderCard = ({ data, name, price, amount, date, user, onClickNaruci }) => {
   const TakeOrder = (d) => {
     try {
-      const obj = axios.put(`http://benjamin002-001-site1.jtempurl.com/TakeOrder/${d}`);
+      const obj = axios.put(`https://benjamin002-001-site1.jtempurl.com/TakeOrder/${d}`);
       console.log(obj);
       onClickNaruci(data);
     } catch (e) {
