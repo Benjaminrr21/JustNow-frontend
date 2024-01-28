@@ -131,6 +131,7 @@ catch(e){
    }
   return (
     <div id='reg-container'>
+      
       <div id='reg-container-main'>
        {/*  <button onClick={()=>navigate("/registracijarest")}><FaBuilding/> Registruj svoj restoran</button> */}
        <h1>Registracija</h1>
@@ -171,8 +172,10 @@ catch(e){
          {{passwordMsg} && <span>{passwordMsg}</span>}
        </div>
        {loading && <p>Registracija je u toku...</p>}
-       <button onClick={()=>Provera()} >Registruj se</button>
+       <div id='bns'>
+       <button onClick={()=>Provera()} >Registruj se</button> ili 
        
+       </div>
       </div>
     </div>
   )

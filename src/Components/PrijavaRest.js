@@ -3,7 +3,7 @@ import React, { useContext, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import {LoginUserContext} from './Context/LoginUserContext'
 import './Styles/Prijava.css'
-
+import {FaBuilding} from 'react-icons/fa'
 const PrijavaRest = () => {
  const [naziv,setNaziv] = useState("");
  const [nazivMsg,setNazivMsg] = useState("");
@@ -104,7 +104,7 @@ const PrijavaRest = () => {
         {error!="" && <span>{error}</span>}
 
         <button  onClick={LoginOwner}>{buttonContent}</button>
-        
+        <button onClick={()=>navigate("/registracijarest")}><FaBuilding/> Registruj svoj restoran</button>
         
         
       </div>
