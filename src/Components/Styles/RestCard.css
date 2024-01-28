@@ -1,0 +1,126 @@
+*{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    overflow: hidden;
+
+}
+#card-main {
+    width: 800px;
+    height: 250px;
+    box-shadow: 0px 0px 10px ;
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+    overflow-y: hidden;
+    background-color: white;
+}
+#card-main:hover {
+    transform: scale(1.07);
+}
+#card-main:hover {
+    background-blend-mode: hard-light;
+}
+#photo{
+    width: 35%;
+    height: 100%;
+    overflow-y: hidden;
+}
+#photo img {
+    overflow: hidden;
+}
+#card-main img {
+    width: 100%;
+    height: 100%;
+
+}
+#content {
+    width: 65%;
+    height: 100%;
+    padding: 0px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#content-inner {
+    padding: 0;
+    margin:0;
+    
+}
+#naslov h3 {
+    text-align: center;
+    color: black;
+}
+#naslov h1 {
+    text-align: center;
+    color: #01796f;
+}
+#naslov {
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: hidden;  
+    display: flex;
+    justify-content: center;  
+    flex-direction: column;
+    background-image: url("/public/Images/restcardbg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#info {
+    overflow-y: hidden;
+
+    display: flex;
+    align-items: center;
+    height: 120px;
+    box-sizing: border-box;
+
+}
+.infos {
+    width: 50%;
+    color: slategray;
+    text-align: center;
+    margin-top: 20px;
+}
+#btn {
+    height:100px;
+    background-color: #01796f;
+    text-align: center;
+    color: white;
+    padding: 35px;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow-y: hidden;
+}
+#btn:hover {
+    background-color: white;
+    color: #01796f;
+    
+}
+#containerr {
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding: 70px;
+    padding-bottom: 40px;
+}
+#outer {
+    display: flex;
+    justify-content: center;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+#delete, #edit {
+    padding: 10px;
+    color: white;
+    width: 100px;
+    
+    font-weight: bold;
+    font-size: 15px;
+    margin-right: 7px;
+}
+#delete:hover {background-color: white; color: red;}
+#edit:hover {background-color: white; color: rgb(102,102,207);}
+#delete { background-color: red;}
+#edit { background-color: rgb(102, 102, 207);}

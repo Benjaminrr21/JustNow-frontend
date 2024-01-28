@@ -1,0 +1,45 @@
+#orders {
+    justify-content: center;
+    display: flex;
+}
+#orders-items {
+    min-width: 30rem;
+    overflow-y: hidden;
+    padding-top: 100px;
+}
+#order-item {
+    width: 400px;
+    min-height: 150px;
+    box-shadow: 1px;
+    border: 1px solid black;
+    padding:20px;
+    margin-top: 70px;
+    box-shadow: 0 0 1px 1px;
+    display: flex;
+    justify-content: center;
+}
+#order-item:hover {
+    transform: scale(1.05);
+    border: none;
+
+    opacity: 0.5;
+}
+ #order-two {
+margin-left: 30px;
+}
+#order-one p, #order-two p {
+    margin-bottom: 7px;
+    
+}
+#order-two button {
+    background-color: #01796f;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 20px;
+
+}
+#order-two button:hover {
+    background-color: white;
+    color: #01796f;
+}

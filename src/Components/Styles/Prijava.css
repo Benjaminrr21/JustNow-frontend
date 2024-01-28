@@ -1,0 +1,67 @@
+
+#main {
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+    background-image: url("/public/Images/download.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:center;
+    height: 93vh;
+    overflow-y: hidden;    
+}
+#login-content {
+    min-width: 30rem;
+    padding-top: 50px;
+    margin-top: 120px;
+    overflow: hidden;
+    filter: none;
+    position: fixed;
+    z-index: 2;
+}
+#login-content h1 {
+    font-size: larger;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #01796f;
+
+}
+#login-content button {
+    width: 100%;
+    background-color: #01796f;
+    color: white;
+    padding: 12px;
+    font-size: larger;
+   border-radius: 30px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.login-inputs input {
+    margin-top: 5px;
+    padding: 10px;
+}
+.login-inputs select {
+    margin-top: 5px;
+    padding: 10px;
+}
+.login-inputs span {
+    font-size: small;
+    color: red;
+}
+#login-content a {
+    
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    color: royalblue;
+}
+span {
+    color: red;
+    font-size: small;
+}

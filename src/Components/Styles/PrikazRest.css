@@ -1,0 +1,81 @@
+#containerP {
+    padding-top: 100px;
+    padding-left: 200px;
+    padding-right: 200px;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+    text-align: center;
+}
+#contentRest {
+    min-width: 80rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow-y:hidden;
+
+}
+#img img {
+    overflow-y: hidden;
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    justify-content: center;
+   margin-left: 60px;
+}
+#contentRest button:hover {
+    background-color: white;
+    color: #01796f;
+    border: 2px solid #01796f;
+    font-weight: bold;
+}
+#contentRest img:hover {
+    opacity: 0.5;
+}
+#contentRest h1 {
+    text-align: center;
+    margin: 20px;
+    color: #01796f;
+}
+#menu {
+    padding-left: 150px;
+}
+#slogan  {
+    text-align: right;
+    font-size: larger;
+    color: rgb(82, 76, 76);
+    font-style: italic;
+}
+#contentRest h3 {
+    margin-bottom: 20px;
+    font-size: larger;
+
+}
+#contentRest button:hover {
+    color: #01796f;
+    background-color: white;
+}
+#editt {
+    background-color: #01796f;
+    width: 60%;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 200px;
+    margin-bottom: 20px;
+}
+
+#about {
+    font-style: italic;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 0;
+
+}
+#infoss {
+    padding: 50px;
+    width: 100%;
+    padding-bottom: 0;
+}

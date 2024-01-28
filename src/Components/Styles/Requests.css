@@ -1,0 +1,32 @@
+#outreq {
+padding: 150px;
+
+}
+#outreq p {
+    margin-bottom: 10px;
+}
+
+#inreq {
+    padding: 0px;
+    width: 30rem;
+    border: 1px solid black;
+    padding: 20px;
+}
+#inreq span {
+    color: black;
+    font-style: italic;
+}
+#inreq button {
+    background-color: #01796f;
+    border-radius: 30px;
+    padding: 10px;
+    margin-left: 50px;
+    color: whitesmoke;
+    padding: 6px;
+    text-align: center;
+
+}
+#inreq button:hover {
+    background-color: white;
+    color: green;
+}

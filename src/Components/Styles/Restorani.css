@@ -1,0 +1,80 @@
+#containerRest {
+    display: flex;
+    background-image: url("/public/Images/download.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    justify-content: center;
+    background-attachment: fixed;
+}
+
+#searchrest {
+    width: 100%;
+    padding: 20px;
+
+
+}
+#restCards {
+    min-width: 50rem;
+    padding-top: 70px;
+    
+}
+#containerRest h1 {
+    text-align: center;
+    box-sizing: border-box;
+}
+#h {
+    font-weight: normal;
+
+}
+#not {
+    color: red;
+    text-align: center;
+    font-size: large;
+}
+iframe {
+    display: none;
+}
+#sort, #filt {
+    padding: 10px;
+    background-color: #01796f;
+    color: white;
+    border-radius: 30px;
+    width: 200px;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+#sort {
+    margin-top: 30px;
+}
+#prvi {
+    width: 20%;
+    background-color: white;
+    margin-top: 170px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0 2px 2px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+#hrana  p{
+    text-align: center;
+    padding: 8px;
+}
+#hrana-item {
+    display: flex;
+    justify-content: center;
+}
+#hrana p:hover {
+    background-color: #01796f;
+    color: white;
+}
+#prvi h4 {
+    text-align: center;
+}
+#loading-text {
+    text-align: center;
+    color: #01796f;
+    font-weight: bold;
+    font-size: large;
+    font-style: italic;
+  }

@@ -1,0 +1,76 @@
+#order {
+    display: flex;
+    justify-content: center;
+    padding-top: 200px;
+    
+}
+#cont {
+    text-align: center;
+    position: fixed;
+  z-index: 20;
+  background: #fff;
+  width: 500px;
+
+  /* Center the modal */
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  
+}
+#cont span {
+    color: #01796f;
+    font-size: large;
+}
+#cont table {
+    font-size: small;
+    font-weight: normal;
+    border: 3px solid #01796f;
+}
+#cont table td {
+    padding: 0;
+    border-bottom: 3px solid #01796f;
+}
+#cont h3 {
+    color: #01796f;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#cont table button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 80%;
+}
+#order-main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: large;
+}
+.order-item {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+.order-item div {
+    width: 120px;
+    padding-right: 15px;
+    text-align: center;
+    
+}
+.order-item:hover {
+    background-color: rgb(143, 209, 143);
+}
+.order-item-button button {
+    background-color: #01796f;
+    color: white;
+    padding: 7px;
+    border-radius: 15px;
+    margin-top: 10px;
+    width: 70%;
+}
+.order-item-button button:hover {
+    background-color: white;
+    color: #01796f;
+    font-size: large;
+}

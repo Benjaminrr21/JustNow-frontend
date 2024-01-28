@@ -1,0 +1,15 @@
+#containerEdit {
+    display: flex;
+    justify-content: center;
+    background-image: url("/public/Images/download.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-top: 100px;
+}
+#contentt {
+    background-color: white;
+    width: 20rem;
+}
+p {
+    text-align: left;
+}

@@ -1,0 +1,69 @@
+#mojracun {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 20rem;
+   
+}
+#mojracun table th {
+    background-color: #01796f;
+    color: white;
+}
+#mojracun table {
+    border: none;
+    margin-top: 20px;
+}
+#mojracun table tr td {
+    font-weight: normal;
+    opacity: 0.6;
+    border: none;
+}
+#mojracun tr:hover {
+    background-color: #01796f;
+    color: white;
+}
+
+#mojracun table tr th {
+    padding: 10px;
+    border: none;
+}
+#mojracun  button {
+    opacity: 1;
+}
+#mojracun p {
+    margin-top: 100px;
+    font-size: larger;
+    text-align: center;
+}
+#mojracun button {
+    width: 100px;
+    background-color: #01796f;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+#x {
+   
+    padding: 6px;
+    font-weight: bold;
+}
+#loc {
+    min-width: 500px;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+}
+#mojracun label {
+    text-align: center;
+    margin-top: 20px;
+}
+#first {
+    display: flex;
+    flex-direction: column;
+    padding: 80px;
+    color: #01796f;
+    background-color: white;
+}

@@ -1,0 +1,43 @@
+#outer2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+#outer {
+    text-align: center;
+    padding-top: 70px;
+    
+    display: flex;
+    flex-direction: column;
+   
+}
+#contentt {
+    min-width: 50rem;
+}
+table {
+    border: 1px solid black;
+    margin: auto;
+    text-align: center;
+}
+th {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-right: 0.5px solid black;
+    border-bottom: 0.5px solid black;
+    padding: 20px;
+}
+tr {
+    border-bottom: 1px solid black;
+}
+ #first {
+    background-color: #01796f;
+    color: white;
+}
+.others:hover {
+background-color: #01796f;
+color: white;
+}
+td {
+    padding: 10px;
+    border-right: 1px solid black;
+}
