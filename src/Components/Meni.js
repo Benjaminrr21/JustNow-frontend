@@ -47,8 +47,8 @@ const Meni = ({rid,meni,restoran,sendDataToParent}) => {
             <td><img className='im' src={item.photoUrl}></img></td>
             <td>{item.price} din</td>
             <td className='btnn'><button  onClick={()=>handleButtonClick(rid, restoran,item.name,item.price)}><MdOutlineNoFood/> Naruci</button></td>
-            <td className='btnn'><button onClick={()=>Brisanje(item.id)}><MdDeleteOutline/> Izbrisi</button></td>
-            <td className='btnn'><button onClick={()=>Izmena(item.id)}><MdEdit/> Izmeni</button></td>
+            <td className='btnn'>{localStorage.getItem("Vlasnik restorana") && <button onClick={()=>Brisanje(item.id)}><MdDeleteOutline/> Izbrisi</button>}</td>
+            <td className='btnn'>{localStorage.getItem("Vlasnik restorana") && <button onClick={()=>Izmena(item.id)}><MdEdit/> Izmeni</button>}</td>
           </tr>)}
           {/*<tr><th>Naziv</th><th>Cena</th><th>Slika</th><th>Naruci</th></tr>*/}
          

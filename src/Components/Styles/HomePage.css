@@ -256,6 +256,7 @@
     border: none;
     border-radius: 30px;
     margin-left: 600px;
+    margin-top: 30px;
     width: 300px;
     color: white;
     font-weight: bold;
@@ -266,19 +267,5 @@
   }
 
 
-  @media only screen and (max-width: 600px) {
-    .navigation {
-      flex-direction: column; /* Stack items vertically */
-      align-items: flex-start;
-    }
-    .navigation-logo, .navigation-links {
-      width: 500px;
-    }
-  
-    .navigation-links {
-      display: none; /* Hide navigation links by default */
-      width: 100%;
-      text-align: center; /* Center text in mobile view */
-    }
-  }
+
   

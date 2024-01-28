@@ -6,6 +6,7 @@ import { MyContext } from '../App'
 import ChangingPage from './ChangingPage'
 import { LoginUserContext } from './Context/LoginUserContext'
 import {FaUser} from 'react-icons/fa'
+import { RiLockPasswordLine } from "react-icons/ri";
 
 import './Styles/Prijava.css'
 
@@ -75,12 +76,12 @@ setLoading(false);
         <h1>Prijavi se na JustNow!</h1>
         {loading && <p id='loading-text'>Prijavljivanje je u toku...</p>}
         <div className='login-inputs'>
-          <label>Korisnicko ime</label>
+          <label><FaUser/> Korisnicko ime</label>
           <input onInput={removeSpan} onChange={e => setUsername(e.target.value)} value={username} type='text' name='username'></input>
           {{usernameMsg} && <span>{usernameMsg}</span>}
         </div>
         <div className='login-inputs'>
-          <label>Lozinka</label>
+          <label><RiLockPasswordLine/> Lozinka</label>
           <input onChange={e => setPassword(e.target.value)} value={password} type='password' name='password'></input>
           {{passwordMsg} && <span>{passwordMsg}</span>}
         </div>

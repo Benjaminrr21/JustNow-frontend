@@ -63,7 +63,7 @@ function Navigation() {
           )}
           {localStorage.getItem("Vlasnik restorana")  && (
           <div id='dropp' className='navigation-links-link' onClick={()=>navigate(`/myorders/${parseInt(localStorage.getItem("IdRest"))}`)}>
-            {notif && <span id='notif'>N</span>}PORUDZBINE
+            {notif && <span id='notif'>N</span>}PORUDŽBINE
             
           </div>
 

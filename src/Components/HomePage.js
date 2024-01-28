@@ -33,17 +33,17 @@ function HomePage() {
     newConnection.on('NewOrderArrived', (receivedMessage) => {
       setMessage(receivedMessage);
       setNotifFunction("Imate nove proudzbine!");
-     
+      alert("Imate nove porudzbine.");
     });
   
   
  
-    if(localStorage.getItem("Admin")) {
+    
     newConnection.on('ReceiveNotification', (receivedMessage) => {
       setMessage(receivedMessage);     
       setRequestFunction("Imate nove zahteve!");
     });
-  }
+  
   
    
 
@@ -64,7 +64,7 @@ function HomePage() {
       {/* {localStorage.getItem("Admin") && <div id='notification' onClick={()=>navigate("/myorders")}><p>Imate nove proudzbine!</p></div>} */}
       <div className='home-content-search'>
           <div id='search'>
-              <button onClick={Pretraga}>PRETRAZI</button>
+              <button onClick={Pretraga}>PRETRAŽI</button>
               <input type='text' value={naziv} onChange={(e)=>setNaziv(e.target.value)} placeholder='Pretrazi restorane...'></input>
           </div>
       </div>

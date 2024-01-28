@@ -3,7 +3,8 @@ import React, { useContext, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom';
 import {LoginUserContext} from './Context/LoginUserContext'
 import './Styles/Prijava.css'
-import {FaBuilding} from 'react-icons/fa'
+import {FaBuilding, FaUser} from 'react-icons/fa'
+import { RiLockPasswordLine } from 'react-icons/ri';
 const PrijavaRest = () => {
  const [naziv,setNaziv] = useState("");
  const [nazivMsg,setNazivMsg] = useState("");
@@ -84,12 +85,12 @@ const PrijavaRest = () => {
           {{usernameMsg} && <span>{usernameMsg}</span>}
         </div> */}
         <div className='login-inputs'>
-          <label>Korisnicko ime vlasnika</label>
+          <label><FaUser/> Korisnicko ime vlasnika</label>
           <input onChange={e => setUsername(e.target.value)} value={username} type='text' name='un'></input>
           {{usernameMsg} && <span>{usernameMsg}</span>}
         </div>
         <div className='login-inputs'>
-          <label>Lozinka</label>
+          <label><RiLockPasswordLine/> Lozinka</label>
           <input onChange={e => setPassword(e.target.value)} value={password} type='password' name='pw'></input>
           {{passwordMsg} && <span>{passwordMsg}</span>}
         </div>
