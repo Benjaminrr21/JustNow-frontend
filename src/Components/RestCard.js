@@ -51,7 +51,7 @@ function RestCard(props) {
       
           
             <div id='naslov'>
-                <h3>Caffe i restaurant</h3>
+                <h3>Restoran</h3>
                 <h1>{props.naziv}</h1>
             </div>
 
@@ -71,8 +71,12 @@ function RestCard(props) {
       {localStorage.getItem("User") && <RatingRest r={props.data}/>}
     </div>
     {localStorage.getItem("Admin") && <div id='editdeletes'>
-      <button id='edit' onClick={EditHandler}>Izmeni</button>
+      {/* <button id='edit' onClick={EditHandler}>Izmeni</button> */}
       <button id='delete' onClick={DeleteHandler}>Izbrisi</button>
+    </div>}
+    {localStorage.getItem("Vlasnik restorana") && props.data == localStorage.getItem("IdRest") && <div id='editdeletes'>
+      <button id='edit' onClick={EditHandler}>Izmeni</button>
+      {/* <button id='delete' onClick={DeleteHandler}>Izbrisi</button> */}
     </div>}
     </div>
   )

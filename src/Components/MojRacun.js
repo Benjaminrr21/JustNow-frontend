@@ -6,6 +6,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { LoginUserContext } from './Context/LoginUserContext';
 import './Styles/MojRacun.css'
 import * as signalR from '@microsoft/signalr'
+import { raccnumber } from './Validations/validationsRegex';
 
 const MojRacun = () => {
 
@@ -19,11 +20,13 @@ const MojRacun = () => {
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
   const [notificate,setNotificate] = useState(false);
+  const [acn,setAcn]  = useState("");
+  
   //const [myOrders,setMyOrders] = useState([]);
 
   useEffect(() => {
     const newConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
+      .withUrl('https://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
       .withAutomaticReconnect()
       .build();
 
@@ -68,6 +71,10 @@ const MojRacun = () => {
   //useEffect(()=>alert(niz[0].proizvod),[]);
 
   const Naruci = async () => {
+    if(acc == true && (!raccnumber.test(acn) || acn.trim().length == 0)) {
+      alert("Nije unet broj računa.");
+      return;
+    }
     setMojRacun([]);
     localStorage.removeItem("Moj racun");
    //alert(typeof(mojRacun[0]))
@@ -138,7 +145,7 @@ const MojRacun = () => {
        <label>Izaberi način plaćanja</label>
        <label onClick={()=>setAcc(false)}>Uzivo</label>
        <label onClick={()=>setAcc(true)}>Karticom</label>
-       {acc && <input type='text' id='loc' placeholder='Unesite broj kartice u formatu: xxx-xxxxxxxxxxxxx-xx'></input>}
+       {acc && <input type='text' value={acn} onChange={(e)=>setAcn(e.target.value)} id='loc' placeholder='Unesite broj kartice u formatu: xxx-xxxxxxxxxxxxx-xx'></input>}
        <button onClick={()=>Naruci()}>Naruci</button>
 
        {notificate && <h2>Porudzbine su poslate. Ubrzo ocekujte vasu hranu. Vas JustNow!</h2>}
