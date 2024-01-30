@@ -65,7 +65,7 @@ function HomePage() {
       <div className='home-content-search'>
           <div id='search'>
               <button onClick={Pretraga}>PRETRAŽI</button>
-              <input type='text' value={naziv} onChange={(e)=>setNaziv(e.target.value)} placeholder='Pretrazi restorane...'></input>
+              <input type='text' value={naziv} onChange={(e)=>setNaziv(e.target.value)} placeholder='Pretraži restorane...'></input>
           </div>
       </div>
       <div className='home-content-header'>
