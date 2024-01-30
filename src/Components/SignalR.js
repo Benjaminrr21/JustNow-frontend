@@ -25,7 +25,7 @@ const NotificationComponent = () => {
 
     
 
-    newConnection.on('ReceiveRestaurantAcceptedNotification', (receivedMessage) => {
+    newConnection.on('ReceiveNotification', (receivedMessage) => {
         setMessage(receivedMessage);
     });
   
@@ -47,7 +47,7 @@ const NotificationComponent = () => {
       <h3>Vas JustNow!</h3>
 
       <p>Obavestenje ce biti prikazano ovde: {message}</p>
-      <button onClick={()=>{navigate(`/unosproizvoda/${idOwner}`)}}>Unesi proizvode</button>
+      {message && <button onClick={()=>{navigate(`/unosproizvoda/${idOwner}`)}}>Unesi proizvode</button>}
       {/* <button onClick={()=>ReceiveNotification()}>SEND</button> */}
     </div>
   );

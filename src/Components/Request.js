@@ -65,7 +65,7 @@ const Request = (props) => {
       <br></br>
       <br></br>
        <button onClick={()=>acceptRequest(props.data)}>Odobri zahtev</button>
-       <button onClick={()=>removeRequest(props.data)}>Ponisti zahtev</button>
+       {/* <button onClick={()=>removeRequest(props.data)}>Ponisti zahtev</button> */}
 
     </div>
   )

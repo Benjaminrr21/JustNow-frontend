@@ -15,7 +15,7 @@ function UnosRest() {
 
     const {idOwner} = useParams();
 
-    const [rest,setRest] = useState(null);
+    const [rest,setRest] = useState(0);
 
     const navigate = useNavigate();
     const [message,setMessage] = useState(false);
@@ -63,11 +63,12 @@ function UnosRest() {
         //setRest(r.data);
         console.log(r);
         const restoran = r.data;
-    
+        setRest(restoran.id);
         console.log(restoran.id);
-        navigate(`/signalr/${idOwner}`);
 
-        alert("uspesno!");
+        navigate(`/signalr/${restoran.id}`);
+
+        //alert("uspesno!");
         //console.log(r.);
         //const p = r.data.id;
         //console.log(JSON.stringify(r));
