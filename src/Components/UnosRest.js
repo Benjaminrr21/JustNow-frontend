@@ -117,7 +117,7 @@ function UnosRest() {
                 <div className='labelinput'>
                     <label>Unesite fotografiju restorana</label>
                     <input type='file' onChange={handleFileChange} ></input>
-                    <img src={file}></img>
+                    <img src={imageBase64}></img>
                     {/* <div id='image' style={{width:100%; height:200px;}}>
 
                     </div> */}
