@@ -13,7 +13,7 @@ const Verify = () => {
     const {currentUser,setUserFunction,owner,setOwnerFunction} = useContext(LoginUserContext);
 
     const check = async () => {
-        alert(typeof(ln));
+        //alert(typeof(ln));
         if(!num) {
             setSpanMsg("Niste uneli kod.");
             return;
