@@ -108,7 +108,7 @@ export const CollapseComp = (props) => {
   )
 }
 export const CollapseCompBasic = (props) => {
-  //const [menuOpen,setMenuOpen] = useState(false);
+  const [menuOpen,setMenuOpen] = useState(false);
   return (
     <div id='collapse-div'>
     <div id='collapse-item' onClick={()=>setMenuOpen(!menuOpen)}>
