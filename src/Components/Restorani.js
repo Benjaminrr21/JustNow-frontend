@@ -88,7 +88,7 @@ function Restorani() {
         }
         catch(e){
             console.log("Error",e);
-            setNotFound(true);
+            //setNotFound(true);
         }
     }
     const showw = () => {

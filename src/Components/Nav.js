@@ -4,7 +4,7 @@ import './Styles/Nav.css'
 import './Styles/HomePage.css'
 import { LoginUserContext } from './Context/LoginUserContext';
 import {FaUser, FaBuilding, FaMoneyBill} from 'react-icons/fa'
-
+import axios from 'axios';
 
 const Nav = () => {
     const [menuOpen,setMenuOpen] = useState(false);
