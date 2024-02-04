@@ -3,6 +3,7 @@ import { Photos } from './Photos';
 import './Styles/ImageGallery.css'
 import { TiThMenu } from "react-icons/ti";
 import { BiCollapseVertical } from "react-icons/bi";
+import axios from 'axios';
 
 
 
