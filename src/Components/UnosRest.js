@@ -126,12 +126,12 @@ function UnosRest() {
                 </div>
                 <div className='labelinput'>
                     <label>Opis restorana</label>
-                    <textarea value={about} onChange={(e)=>setAbout(e.target.value)}></textarea>
+                    <textarea rows={5} value={about} onChange={(e)=>setAbout(e.target.value)}></textarea>
                 </div>
                 <div className='labelinput'>
                     <label>Unesite fotografiju restorana</label>
                     <input type='file' onChange={handleFileChange} ></input>
-                    <img src={imageBase64}></img>
+                   
                     {/* <div id='image' style={{width:100%; height:200px;}}>
 
                     </div> */}

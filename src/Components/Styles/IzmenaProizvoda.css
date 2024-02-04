@@ -11,3 +11,22 @@
 p {
     text-align: left;
 }
+#contentt h1 {
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+#containerEdit {
+    flex-direction: column;
+    
+}
+#contentt {
+    width: 17rem;
+}
+#contentt h1 {
+    font-size: 30px;
+    text-align: left;
+}
+
+
+}

@@ -114,7 +114,7 @@ const EditRest = () => {
                 <div className='labelinput'>
                     <label>Fotografija restorana</label>
                      <input type='file' onChange={handleFileChange} ></input>
-                    <img src={image}></img> 
+                    
                 
                 </div>
                 <button onClick={editRest}>Izmeni</button>

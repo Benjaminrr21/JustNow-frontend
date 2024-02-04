@@ -90,7 +90,7 @@ const IzmenaProizvoda = () => {
   return (
     <div id='containerEdit'>
        <div id='contentt'>
-       <h1>Izmenite podatke o proizvodu.</h1>
+       <h1>Izmenite podatke o proizvodu</h1>
 
             <div id='infos'>
                 <div className='labelinput'>
@@ -98,7 +98,7 @@ const IzmenaProizvoda = () => {
                     <p id='restUpdate'>{nameRest}</p>
                 </div>
                 <div className='labelinput'>
-                    <label>Naziv porizvoda</label>
+                    <label>Naziv proizvoda</label>
                     <input type='text' value={product.name} onChange={(e)=>{
                         setProduct((oldState) => ({
                             ...oldState,
