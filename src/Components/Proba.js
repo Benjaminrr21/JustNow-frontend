@@ -1,4 +1,120 @@
-import axios from 'axios';
+// Navigation.jsx
+
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { LoginUserContext } from './Context/LoginUserContext';
+import { FaUser, FaBuilding, FaMoneyBill } from 'react-icons/fa';
+
+import './Styles/Navigation2.css'; // Import your CSS file
+
+function Proba() {
+  const navigate = useNavigate();
+
+  const {
+    currentUser,
+    owner,
+    setUserFunction,
+    setOwnerFunction,
+    admin,
+    setAdminFunction,
+    notif,
+    setNotifFunction,
+    req,
+    setRequestFunction,
+  } = useContext(LoginUserContext);
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
+  const warning = () => {
+    if (!localStorage.getItem("Moj racun")) alert("Nemate stavki na računu !!");
+    else navigate(`/mojracun/${JSON.parse(localStorage.getItem("User")).user.id}`);
+    closeMobileMenu();
+  };
+
+  const LogoutHandler = () => {
+    setUserFunction(null);
+    axios.defaults.headers.common['Authorization'] = ``;
+    localStorage.clear();
+    navigate("/homepage");
+  };
+
+  return (
+    <div className={`navigation ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
+      <div id='navigation-logo' onClick={() => navigate("/homepage")}></div>
+
+      <div id='navigation-links' className={isMobileMenuOpen ? 'mobile-menu' : ''}>
+        <div className='navigation-links-link' onClick={() => navigate("/restorani")}>
+          <FaBuilding /> RESTORANI
+        </div>
+        {localStorage.getItem("User") && !localStorage.getItem("Admin") && !localStorage.getItem("Vlasnik restorana") && (
+          <div onClick={warning} id='dropp' className='navigation-links-link'>
+            <FaMoneyBill /> MOJ RAČUN
+          </div>
+        )}
+        {!localStorage.getItem("User") && !localStorage.getItem("Vlasnik restorana") && (
+          <div id='dropp' className='navigation-links-link' onClick={() => navigate("/registracija")}>
+            <FaUser /> REGISTRACIJA
+          </div>
+        )}
+        {localStorage.getItem("Admin") && (
+          <div id='dropp' className='navigation-links-link' onClick={() => navigate("/requests")}>
+            {req && <span id='notif'>N</span>}ZAHTEVI
+          </div>
+        )}
+        {localStorage.getItem("Vlasnik restorana") && (
+          <div id='dropp' className='navigation-links-link' onClick={() => navigate(`/myorders/${parseInt(localStorage.getItem("IdRest"))}`)}>
+            {notif && <span id='notif'>N</span>}PORUDZBINE
+          </div>
+        )}
+        {(localStorage.getItem("User") || localStorage.getItem("Vlasnik restorana")) && (
+          <div id='logout' className='navigation-links-link' onClick={LogoutHandler}>
+            <button id='lo'>Odjavi se</button>
+          </div>
+        )}
+      </div>
+
+      {/* Mobile menu button */}
+      <div className='mobile-menu-button' onClick={toggleMobileMenu}>
+        {/* You can use an icon or text for the mobile menu button */}
+        <div className='menu-icon'>&#9776;</div>
+      </div>
+    </div>
+  );
+}
+
+export default Proba;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* import axios from 'axios';
 import React, { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom';
 import './Styles/UnosRest.css'
@@ -18,7 +134,7 @@ function Proba() {
     const [rest,setRest] = useState(0);
 
     const navigate = useNavigate();
-    const [message,setMessage] = useState(false);
+    const [message,setMessage] = useState(false); */
 
 
 
@@ -31,7 +147,7 @@ function Proba() {
     
 
 
-    const handleFileChange = (event) => {
+  /*  const handleFileChange = (event) => {
         const file = event.target.files[0];
 
         if (file) {
@@ -120,16 +236,8 @@ function Proba() {
                     <img src={imageBase64}></img>
                     {/* <div id='image' style={{width:100%; height:200px;}}>
 
-                    </div> */}
-                </div>
-                <button onClick={insertToDb}>Posalji zahtev</button>
-            </div>
-       </div>
-    </div>
-  )
-}
-
-export default Proba
+                    </div> */
+        
 
 
 

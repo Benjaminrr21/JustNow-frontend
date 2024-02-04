@@ -7,6 +7,7 @@ const UnosProizvod = () => {
     const r = useParams();
     const [meni,setMeni] = useState([]);
     const navigate = useNavigate();
+    const [file,setFile] = useState("");
 
     const [rbr,setRbr] = useState(1);
     const [name,setName] = useState("");
@@ -18,22 +19,37 @@ const UnosProizvod = () => {
       const file = event.target.files[0];
 
       if (file) {
-          const reader = new FileReader();
+         /*  const reader = new FileReader();
           reader.onloadend = () => {
               setUrl(reader.result);
           };
-          reader.readAsDataURL(file);
+          reader.readAsDataURL(file); */
+          setFile(file);
       }
-  };
+    }
 
 
 
     const InsertProduct = async () => {
       console.log(name,url,cena,r);
       try {
+        const formData = new FormData();
+            formData.append('file',file);
+
+            const cloudResponse = await axios.post("https://api.cloudinary.com/v1_1/dx1ec9jse/image/upload/",formData,{
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+                params: {
+                    upload_preset: 'fvplqlov',
+                },
+            
+            });
+            const imageUrl = cloudResponse.data.secure_url;
+
       const inp = await axios.post("https://benjamin002-001-site1.jtempurl.com/AddProduct",{
         name:name,
-        photoUrl: url,
+        photoUrl: imageUrl,
         price: cena,
         description: "",
         restaurantId: r.id
@@ -57,7 +73,7 @@ const UnosProizvod = () => {
       <table id='menu'>
         <tbody>
           <tr><th>Naziv</th><th>Fotografija jela</th><th>Cena</th></tr>
-          <tr><td><input type='text' value={name} onChange={(e)=>setName(e.target.value)} className='naziv'></input></td><td><input className='slika' type='file' onChange={handleFileChange}></input></td><td><input type='number' id='num' className='cena' value={cena} onChange={(e)=>setCena(e.target.value)} min={10} max={10000}></input><span> din</span></td><td><button onClick={InsertProduct}>Dalje</button></td></tr>
+          <tr><td><input type='text' value={name} onChange={(e)=>setName(e.target.value)} className='naziv'></input></td><td><input className='slika' type='file' onChange={handleFileChange}></input></td><td><input type='number' id='numb' className='cena' value={cena} onChange={(e)=>setCena(e.target.value)} min={10} max={10000}></input><span> din</span></td><td><button onClick={InsertProduct}>Dalje</button></td></tr>
          <tr><td/><td/><td><button onClick={()=>navigate(`/prikazrestorana/${r.id}`)}>Kraj</button></td></tr>
         </tbody>
       </table>

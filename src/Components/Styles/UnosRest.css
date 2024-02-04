@@ -70,3 +70,61 @@ img {
 #contentt h1 {
     color: #01796f;
 }
+@media only screen and (max-width: 600px) {
+    #content {
+        min-width: 25rem;
+        margin-left: 0;
+        padding: 10px;
+        padding-right: 20px;
+        box-shadow: 0px 0px 0px 0px;
+    }
+
+    #container {
+        display: flex;
+        justify-content: center;
+        background-image: none;
+        padding-right: 15px;
+        padding-left: 20px;
+    }
+
+    #infos {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        padding: 20px;
+    }
+    #infos button {
+        width: 23rem;
+    }
+    #infos input, #infos textarea, #infos img {
+        width: 23rem;
+    }
+    #infos img {
+        overflow-y: hidden;
+    }
+}
+
+/* @media only screen and (max-width: 600px){
+#content {
+    min-width: 25rem;
+    margin-left: 0;
+    padding: 10px;
+    padding-right: 20px;
+}
+#container {
+   
+    display: flex;
+    justify-content: center;
+}
+#infos {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: auto;
+}
+
+} */

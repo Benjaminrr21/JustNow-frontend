@@ -18,7 +18,7 @@ const MyOrders = () => {
 
   useEffect(() => {
     const newConnection = new signalR.HubConnectionBuilder()
-      .withUrl('http://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
+      .withUrl('https://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
       .withAutomaticReconnect()
       .build();
 
@@ -82,12 +82,12 @@ const MyOrders = () => {
   return (
     <div id='orders'>
       
-        {notMess && <h1>Nema novih porudzbina.</h1>}
+        {notMess && <h1>Nema novih porudžbina.</h1>}
 
         {!notMess && 
           <div id='orders-items'>
           
-            <h1>Narudzbine</h1>
+            <h1 style={{margin:'50px'},{textAlign:"center"}}>Narudžbine</h1>
             
              {myOrders.map((order) => <OrderCard niz={myOrders} key={order.id} data={order.id}
             name={order.name}

@@ -19,13 +19,13 @@ function PrikazKorisnika() {
         }
 },[])
   return (
-    <div id='outer'>
+    <div id='outerr'>
         <h2>Korisnici aplikacije JustNow</h2>
         <div id='outer2'>
         <div id='contentt'>
             <table>
                 <tbody>
-                <tr id='first'>
+                <tr id='firstrow'>
                     <th>Ime</th>
                     <th>Prezime</th>
                     <th>Broj telefona</th>

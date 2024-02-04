@@ -31,6 +31,12 @@ import MyOrders from './Components/MyOrders';
 import PrijavaRest from './Components/PrijavaRest';
 import MojRacun from './Components/MojRacun';
 import Proba from './Components/Proba';
+import Proba2 from './Components/Proba2';
+import Cloudinary from './Components/Cloudinary'
+import Mail from './Components/Mail'
+import Verify from './Components/Verify';
+import Nav from './Components/Nav';
+import ImageGallery from './Components/ImageGallery';
 
 export const MyContext = createContext();
 
@@ -49,7 +55,8 @@ function App() {
   },[]);
   return (
       <>
-      <Navigation/>
+      {/*  <Navigation/>  */}
+      <Nav/>
       <Routes>
        <Route path="/" element={<Navigate to="/homepage"/>}></Route>
        <Route path="/homepage" element={<HomePage/>}></Route>
@@ -76,6 +83,12 @@ function App() {
        <Route path="/prijavarest" element={<PrijavaRest/>}></Route>
        <Route path="/mojracun/:id" element={<MojRacun/>}></Route>
        <Route path="/regex" element={<Proba/>}></Route>
+       <Route path="/proba2" element={<Proba2/>}></Route>
+       <Route path="/cl" element={<Cloudinary/>}></Route>
+       <Route path="/mail" element={<Mail/>}></Route>
+       <Route path="/images" element={<ImageGallery/>}></Route>
+       <Route path="/verify/:uo/:hn/:n/:l/:e/:pn/:u/:p" element={<Verify/>}></Route>
+
        <Route path="*" element={<ErrorPage/>}></Route>
       
       </Routes>

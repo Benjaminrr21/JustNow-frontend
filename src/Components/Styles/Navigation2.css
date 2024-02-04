@@ -1,0 +1,78 @@
+/* Navigation.css */
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  /* Your existing styles... */
+  
+  /* Media query for smaller screens */
+  @media only screen and (max-width: 600px) {
+    .navigation {
+      flex-direction: column; /* Stack items vertically */
+      align-items: flex-start;
+    }
+  
+    .navigation-links {
+      display: none; /* Hide navigation links by default */
+      width: 100%;
+      text-align: center; /* Center text in mobile view */
+    }
+  
+    .navigation-links.mobile-menu {
+      display: flex; /* Show links in mobile menu */
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .mobile-menu-button {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+  
+  
+    .mobile-menu-open .navigation-links {
+      display: flex;
+    }
+  }
+  #navv {
+      padding: 20px;
+      margin-top: 100px;
+      background-color: rgb(126, 194, 126);
+      display: flex;
+      justify-content: center;
+      color: black;
+  }
+   #a {
+       padding: 0;
+      width: 30%;
+  }
+   #b {
+      width: 70%;
+  }
+  
+  @media only screen and (max-width: 600px){
+      
+      #a,#b {
+          width: 50%;
+          text-align: center;
+      }
+      #a {
+
+          background-image: url("/public/Images/logo.png");
+          background-repeat: no-repeat;
+          background-size: 100%;
+          background-position: center;
+          
+      }
+  }
+  #warningpassword {
+      font-size: x-small;
+      color: black;
+      margin-top: 1.5px;
+  }

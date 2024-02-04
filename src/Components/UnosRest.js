@@ -35,19 +35,33 @@ function UnosRest() {
         const file = event.target.files[0];
 
         if (file) {
-            const reader = new FileReader();
+            setFile(file);
+            /* const reader = new FileReader();
             reader.onloadend = () => {
-                setImageBase64(reader.result);
+                setImageBase64(reader.result); */
             };
-            reader.readAsDataURL(file);
+            //reader.readAsDataURL(file);
         }
-    };
+
 
 
 
      const insertToDb = async () => {
 //        alert(imageBase64);
         try{
+            const formData = new FormData();
+            formData.append('file',file);
+
+            const cloudResponse = await axios.post("https://api.cloudinary.com/v1_1/dx1ec9jse/image/upload",formData,{
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+                params: {
+                    upload_preset: 'fvplqlov',
+                },
+            
+            });
+            const imageUrl = cloudResponse.data.secure_url;
          //const r = await axios.post("https://localhost:7224/AddRestaurant", {
          const r = await axios.post("https://benjamin002-001-site1.jtempurl.com/AddRestaurant", {
             pib: pib,
@@ -55,7 +69,7 @@ function UnosRest() {
             location: lokacija,
             workingTime: radnoVreme,
             slogan: slogan,
-            urlPhoto: imageBase64 ,
+            urlPhoto: imageUrl ,
             ownerId: idOwner,
             about: about,
             status: false //da li je zahtev odobren ili ne. Inicijalno nije.
@@ -83,10 +97,10 @@ function UnosRest() {
   return (
     <div id='container'>
        <div id='content'>
-       <h1>Dobrodosli! Unesite informacije o vasem restoranu.</h1>
-       <p>Podaci o restoranu bice poslati administratoru na odobravanje. Bicete obavesteni o tome da li ste uspesno registrovali vas restoran.</p>
-       <p>Vas JustNow</p>
-       {message && <p>Vas zahtev je odobren.</p>}
+       <h1>Dobrodosli! Unesite informacije o vašem restoranu.</h1>
+       <p>Podaci o restoranu biće poslati administratoru na odobravanje. Bicete obavesteni o tome da li ste uspesno registrovali vas restoran.</p>
+       <p>Vaš JustNow</p>
+       {message && <p>Vaš zahtev je odobren.</p>}
        {message && <button>Idi dalje</button>} 
 
             <div id='infos'>
@@ -127,6 +141,6 @@ function UnosRest() {
        </div>
     </div>
   )
-}
+                }
 
 export default UnosRest

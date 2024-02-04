@@ -4,8 +4,10 @@ import RestCard from './RestCard';
 //import rest1 from './rest1.jpg'
 import './Styles/RestCard.css'
 import {FaHamburger} from 'react-icons/fa'
-import { IoArrowRedoSharp } from "react-icons/io5";
+import { IoArrowRedoSharp, IoDesktopOutline } from "react-icons/io5";
 import { IoMdPizza } from "react-icons/io";
+import { FaSearch } from 'react-icons/fa';
+import { CollapseComp, CollapseCompBasic } from './ImageGallery';
 
 import Spinner from 'react-bootstrap/Spinner'
 
@@ -15,10 +17,16 @@ function Restorani() {
   const [food,setFood] = useState("");
   const [loading,setLoading] = useState(false);
   const [no,setNo] = useState("");
+  const [naziv,setNaziv] = useState("");
+  const [open,setOpen] = useState(true);
+
+  
+
   const getKey = (e) => {
     alert(e.target.getAttribute("data"));
   }
     const [niz,setNiz] = useState([]);
+    const [niz2,setNiz2] = useState([]);
     /* useEffect(() => {
       setLoading(true);
         //axios.get("https://localhost:7224/GetAllRestaurants")
@@ -67,10 +75,30 @@ function Restorani() {
     useEffect(()=>{
       getRests();
     },[]);
+
+    const SearchRest = async (e) =>{
+      setNaziv(e.target.value);
+      try {
+        const restorani = await axios.get(`https://benjamin002-001-site1.jtempurl.com/SearchRestaurantByName/${naziv}`)
+        
+        
+        const rests = restorani.data;
+        console.log(rests);
+        setNiz(rests);
+        }
+        catch(e){
+            console.log("Error",e);
+            setNotFound(true);
+        }
+    }
+    const showw = () => {
+    setOpen(!open);
+    }
    
   return (
     <div id='containerRest'>
-     <div id='prvi'>
+      <div id='colapse' onClick={()=>showw()}><CollapseCompBasic  title='Sortiraj/Filtriraj restorane'/></div>
+     {open && <div id='prvi'>
        <button id='sort' onClick={()=>Sort()}>Sortiraj po oceni</button>
        <button id='filt' onClick={()=>{
          if(food == ''){ 
@@ -91,10 +119,14 @@ function Restorani() {
           <p onClick={(e)=>setFood(e.currentTarget.innerText)}><IoArrowRedoSharp/>Hrskava piletina</p>
          
        </div>
-     </div>
+     </div>}
     <div id='restCards'>
  
     <div>
+    <div id='search2'>
+              <button id='s' onClick={SearchRest}><FaSearch/></button>
+              <input type='text' value={naziv} onChange={(e)=>SearchRest(e)} placeholder='Pretraži restorane...'></input>
+    </div>
       
       {loading && <p id='loading-text'>Učitavanje restorana...</p>}
       {no && <p id='loading-text'>{no}</p>}

@@ -1,9 +1,17 @@
 #meni {
     border: none;
+    border-collapse: collapse;
+    overflow-x: auto;
     
 }
 #meni tr, #meni th, #meni td {
     border: none;
+}
+
+#meni th, #meni td {
+    padding: 8px;
+    text-align: left;
+    white-space: nowrap;
 }
 #meni td {
     min-width: 150px;
@@ -34,4 +42,14 @@
 }
 #meni tr:hover {
     opacity: 0.5;
+}
+@media only screen and (max-width: 600px) {
+    th, td {
+        font-size: 12px;
+    }
+    
+    .btnn button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
 }

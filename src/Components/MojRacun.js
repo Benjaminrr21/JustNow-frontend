@@ -7,6 +7,7 @@ import { LoginUserContext } from './Context/LoginUserContext';
 import './Styles/MojRacun.css'
 import * as signalR from '@microsoft/signalr'
 import { raccnumber } from './Validations/validationsRegex';
+import { Streets } from './ImageGallery';
 
 const MojRacun = () => {
 
@@ -21,6 +22,7 @@ const MojRacun = () => {
   const navigate = useNavigate();
   const [notificate,setNotificate] = useState(false);
   const [acn,setAcn]  = useState("");
+  const [ulica,setUlica] = useState();
   
   //const [myOrders,setMyOrders] = useState([]);
 
@@ -141,14 +143,20 @@ const MojRacun = () => {
        </table>
        }
        <p>Unesite lokaciju:</p>
-       <input id='loc' type='text' ></input>
+       <label>Ulica</label>
+       <select onChange={(e)=>setUlica(e.target.value)} className='loc'>
+         {Streets.map(street => <option>{street}</option>)}
+       </select>
+       <label>Broj</label>
+       <input className='loc2' type='number' min='1'></input>
+       {/* <input id='loc' type='text' ></input> */}
        <label>Izaberi način plaćanja</label>
-       <label onClick={()=>setAcc(false)}>Uzivo</label>
-       <label onClick={()=>setAcc(true)}>Karticom</label>
+       <label className='nacin' onClick={()=>setAcc(false)}>Uživo</label>
+       <label className='nacin' onClick={()=>setAcc(true)}>Karticom</label>
        {acc && <input type='text' value={acn} onChange={(e)=>setAcn(e.target.value)} id='loc' placeholder='Unesite broj kartice u formatu: xxx-xxxxxxxxxxxxx-xx'></input>}
        <button onClick={()=>Naruci()}>Naruci</button>
 
-       {notificate && <h2>Porudzbine su poslate. Ubrzo ocekujte vasu hranu. Vas JustNow!</h2>}
+       {notificate && <h2 id='obaves'>Porudzbine su poslate. Ubrzo ocekujte vasu hranu. Vas JustNow!</h2>}
     </div>
   )
 }

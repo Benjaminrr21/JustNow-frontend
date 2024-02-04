@@ -1,9 +1,11 @@
 // OrderCard.js
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { getUserAgentHeader } from '@microsoft/signalr/dist/esm/Utils';
 
 const OrderCard = ({ data, name, price, amount, date, user, onClickNaruci }) => {
+  const [korisnik,setKorisnik] = useState({});
   const TakeOrder = (d) => {
     try {
       const obj = axios.put(`https://benjamin002-001-site1.jtempurl.com/TakeOrder/${d}`);
@@ -13,6 +15,21 @@ const OrderCard = ({ data, name, price, amount, date, user, onClickNaruci }) => 
       console.log("Error", e);
     }
   };
+  const getUser = async () => {
+    try{
+    const u = await axios.get(`https://benjamin002-001-site1.jtempurl.com/GetUserWithId/${parseInt(user)}`);
+    console.log(u)
+    console.log(u.data)
+
+    setKorisnik(u.data);
+    }
+    catch(e){
+      console.log("Error",e);
+    }
+  }
+  useEffect(()=>{
+    getUser();
+  },[])
 
   return (
     <div id='order-item'>
@@ -20,17 +37,17 @@ const OrderCard = ({ data, name, price, amount, date, user, onClickNaruci }) => 
       <div id='order-one'>
         <p>Proizvod</p>
         <p>Cena proizvoda</p>
-        <p>Kolicina</p>
-        <p>Vreme porudzbine</p>
+        <p>Količina</p>
+        <p>Vreme porudžbine</p>
         <p>Korisnik</p>
-        <p>Ukupan iznos porudzbine</p>
+        <p>Ukupan iznos porudžbine</p>
       </div>
       <div id='order-two'>
         <p>{name}</p>
         <p>{price} din</p>
         <p>{amount}</p>
         <p>{date}</p>
-        <p>{user}</p>
+        <p>{korisnik.username}</p>
         <p>{amount * price} din</p>
         <button onClick={() => TakeOrder(data)}>Prihvati porudzbinu</button>
       </div>

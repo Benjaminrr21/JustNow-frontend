@@ -3,7 +3,7 @@
     justify-content: center;
     padding-top: 30px;
 }
-#outer {
+#outerr {
     text-align: center;
     padding-top: 70px;
     
@@ -29,7 +29,7 @@ th {
 tr {
     border-bottom: 1px solid black;
 }
- #first {
+ #firstrow {
     background-color: #01796f;
     color: white;
 }

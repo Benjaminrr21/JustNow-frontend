@@ -1,0 +1,26 @@
+#reg-btn {
+    min-width: 12rem;
+    display: flex;
+    justify-content: center;
+}
+#reg2-btn {
+    align-items: center;
+    padding-top: 300px;
+}
+#reg2-btn input {
+    padding: 14px;
+    border: 1px solid black;
+    
+}
+#reg2-btn button {
+    color: white;
+    background-color: #01796f;
+    padding: 15px;
+    text-align: center;
+    border: none;
+
+}
+#reg2-btn p {
+    margin-bottom: 15px;
+    text-align: center;
+}

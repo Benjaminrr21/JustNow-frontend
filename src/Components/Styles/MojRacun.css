@@ -50,11 +50,27 @@
     padding: 6px;
     font-weight: bold;
 }
-#loc {
+.loc {
     min-width: 500px;
     text-align: center;
     margin: auto;
     margin-top: 30px;
+    padding: 6px;
+}
+.loc2 {
+    width: 50px;
+    border: 1px solid black;
+    margin: auto;
+    padding:7px;
+}
+.loc option {
+    padding: 10px;
+   
+}
+.loc option:hover {
+    color: white;
+    background-color: #01796f;
+   
 }
 #mojracun label {
     text-align: center;
@@ -63,7 +79,20 @@
 #first {
     display: flex;
     flex-direction: column;
-    padding: 80px;
+    padding: 50px;
     color: #01796f;
     background-color: white;
+}
+.nacin  {
+   
+    border-style: outset;
+    width: 80px;
+    margin: 0;
+    margin: auto;
+    background-color: #01796f;
+    color: white;
+    padding: 3px;
+}
+#obaves {
+    text-align: center;
 }

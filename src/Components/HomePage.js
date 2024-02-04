@@ -72,7 +72,8 @@ function HomePage() {
           <div id='heder'>
            <h1>Brzo i sigurno do svoje omiljene hrane!</h1>
           </div>
-          {!localStorage.getItem("User") && <div className='btn'>
+          <div id='buttons'>
+          {!localStorage.getItem("User") && !localStorage.getItem("Vlasnik restorana") && <div className='btn'>
            <button id='log' onClick={()=>navigate("/prijava")}><FaUser size={20}/>PRIJAVI SE KAO KORISNIK</button>
          {/*  </div> */}
          {/*  <div className='btn'> */}
@@ -84,6 +85,7 @@ function HomePage() {
            {localStorage.getItem("Admin") && 
            <button id='mojrest' onClick={()=>navigate('/prikazkorisnika')}>KORISNICI</button>
            }
+           </div>
           
       </div>
     </div>

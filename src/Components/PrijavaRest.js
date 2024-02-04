@@ -77,15 +77,15 @@ const PrijavaRest = () => {
     <div id='main'>
       <div id='login-content'>
         
-        <h1>Prijavi svoj restoran i uspesno posluj na JustNow!</h1>
-        <p>Najpre unesite podatke o vlasniku restorana</p>
+        <h1>Prijavi svoj restoran i uspešno posluj na JustNow!</h1>
+        <p style={{marginBottom:'10px'},{textAlign:'center'}}>Najpre unesite podatke o vlasniku restorana</p>
       {/*   <div className='login-inputs'>
           <label>Naziv restorana</label>
           <input onInput={removeSpan} onChange={e => setUsername(e.target.value)} value={username} type='text' name='username'></input>
           {{usernameMsg} && <span>{usernameMsg}</span>}
         </div> */}
         <div className='login-inputs'>
-          <label><FaUser/> Korisnicko ime vlasnika</label>
+          <label><FaUser/> Korisničko ime vlasnika</label>
           <input onChange={e => setUsername(e.target.value)} value={username} type='text' name='un'></input>
           {{usernameMsg} && <span>{usernameMsg}</span>}
         </div>

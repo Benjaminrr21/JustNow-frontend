@@ -16,6 +16,7 @@ const Order = () => {
 
     const {racun,setRacunFunction} = useContext(LoginUserContext);
 
+    const [ord,setOrd] = useState(false);
     useEffect(() => {
         const newConnection = new signalR.HubConnectionBuilder()
           .withUrl('https://benjamin002-001-site1.jtempurl.com/adminNotificationHub') // Update with your API URL
@@ -43,6 +44,7 @@ const Order = () => {
       useEffect(()=>{setNovaCena(amount*cena)},[amount]);
 
     const Naruci = async () => {
+      setOrd(true);
         const currentDate = new Date();
         const formattedDate = currentDate.toISOString();
 
@@ -109,6 +111,7 @@ const Order = () => {
             
             <div className='order-item-button'>
                 <button onClick={()=>Naruci()}>Naruci</button>
+                {ord && <p id='ord'>Dodato na vaš račun!</p>}
             </div>
         </div>
        

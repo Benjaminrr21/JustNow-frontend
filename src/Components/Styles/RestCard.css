@@ -107,9 +107,11 @@
 }
 #outer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     padding-top: 0px;
     padding-bottom: 0px;
+    flex-direction: column;
 }
 #delete, #edit {
     padding: 10px;
@@ -119,6 +121,10 @@
     font-weight: bold;
     font-size: 15px;
     margin-right: 7px;
+}
+#editdeletes {
+    display: flex;
+    justify-content: center;
 }
 #delete:hover {background-color: white; color: red;}
 #edit:hover {background-color: white; color: rgb(102,102,207);}

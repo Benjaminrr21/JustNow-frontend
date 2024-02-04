@@ -2,9 +2,7 @@
 padding: 150px;
 
 }
-#outreq p {
-    margin-bottom: 10px;
-}
+
 
 #inreq {
     padding: 0px;
@@ -15,6 +13,8 @@ padding: 150px;
 #inreq span {
     color: black;
     font-style: italic;
+    margin-bottom: 5px;
+
 }
 #inreq button {
     background-color: #01796f;

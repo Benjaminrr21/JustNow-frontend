@@ -79,3 +79,39 @@
     width: 100%;
     padding-bottom: 0;
 }
+
+@media only screen and (max-width: 600px) {
+    #containerP {
+        padding: 20px;
+        padding-top: 70px;
+    }
+    .fade {
+        padding-left: 0px;
+    }
+
+    #contentRest {
+        min-width: 30rem;
+        overflow-x: scroll;
+
+    }
+
+    #img img {
+        margin-left: 0;
+    }
+
+    #menu {
+        padding-left: 20px;
+    }
+
+    #editt {
+        margin-left: 20px;
+        width: 100%;
+    }
+    #infoss {
+        padding: 0;
+    }
+    #containerP {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
