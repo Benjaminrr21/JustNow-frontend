@@ -68,15 +68,21 @@ const UnosProizvod = () => {
     }
   return (
     <div id='menuCont'>
-      <div id='h2'><h2>Unesite meni vaseg restorana</h2></div>
-      <div>
+      <div id='h2'><h2>Unesite meni vašeg restorana</h2></div>
+      <div id='tableDiv'>
       <table id='menu'>
         <tbody>
-          <tr><th>Naziv</th><th>Fotografija jela</th><th>Cena</th></tr>
+          <tr><th>Naziv jela</th><td><input type='text' value={name} onChange={(e)=>setName(e.target.value)} className='naziv'></input></td></tr>
+          <tr><th>Fotografija jela</th><td><input className='slika' type='file' onChange={handleFileChange}></input></td></tr>
+          <tr><th>Cena</th><td><input type='number' id='numb' className='cena' value={cena} onChange={(e)=>setCena(e.target.value)} min={10} max={10000}></input><span> din</span></td></tr>
+          <tr><td><button onClick={InsertProduct}>Dalje</button></td><td><button onClick={()=>navigate(`/prikazrestorana/${r.id}`)}>Kraj</button></td></tr>
+          
+         {/*  <tr><th>Naziv</th><th>Fotografija jela</th><th>Cena</th></tr>
           <tr><td><input type='text' value={name} onChange={(e)=>setName(e.target.value)} className='naziv'></input></td><td><input className='slika' type='file' onChange={handleFileChange}></input></td><td><input type='number' id='numb' className='cena' value={cena} onChange={(e)=>setCena(e.target.value)} min={10} max={10000}></input><span> din</span></td><td><button onClick={InsertProduct}>Dalje</button></td></tr>
-         <tr><td/><td/><td><button onClick={()=>navigate(`/prikazrestorana/${r.id}`)}>Kraj</button></td></tr>
+          <tr><td/><td/><td><button onClick={()=>navigate(`/prikazrestorana/${r.id}`)}>Kraj</button></td></tr> */}
         </tbody>
       </table>
+      
       </div>
     </div>
   )
